@@ -3,6 +3,9 @@ const hamburgerIcon = document.querySelector("#hamburger-icon")
 
 
 hamburgerIcon.addEventListener("click", function(){
-      hamburgerMenu.classList.toggle("hidden")
-      hamburgerIcon.innerText = hamburgerIcon.innerText === '☰' ?  '✖' : '☰'
-})
+           hamburgerMenu.classList.toggle("nav__hidden")
+            hamburgerMenu.classList.toggle("vh")
+           
+            hamburgerIcon.innerText = hamburgerIcon.innerText === '☰' ?  '✖' : '☰'
+      })
+      

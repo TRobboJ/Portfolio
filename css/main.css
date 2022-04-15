@@ -29,9 +29,9 @@ body{
 
 header{
     background-color: var(--dark);
-    min-height: 1vh; 
+   
     color: var(--light);
-    padding: 0.5em 0 0;
+   
     width: 100%;
 }
 a{
@@ -44,20 +44,26 @@ a:visited{
 ul li.nav__item{
     list-style-type: none;
 }
-.hidden{
-    display: none;
-}
+
 
 .nav{
    width:100%;
    display: flex;
-   justify-content: space-between;
+  
+   
+    
+}
+.nav__popout{
+    transform: translateX(-100%);
+    transition: 0.6s ease-in-out;
+    display: flex;
  
 }
 .nav__list{
     width: 100%;
     justify-content: center;
     text-align: center;
+    
 }
 .nav__item + .nav__item{
     padding: 1em 0 0;
@@ -79,12 +85,30 @@ ul li.nav__item{
 }
 .nav__item a:hover{
     color: var(--light-col);
-    transform: scale(1.2); /*you didn't have the semi-colons here*/
-    /* -ms-transform: scale(1.5, 1.5);
-    -webkit-transform: scale(1.5, 1.5);
-    -moz-transform: scale(1.5, 1.5);
-    -o-transform: scale(1.5, 1.5); */
+    transform: scale(1.2); 
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
+.nav__hidden{
+    height: 0;
+}
+.hidden{
+    display: none;
+}
+.fade__right{
+    transform: translateX(200%);
+}
+.vh{
+    height: 100vh;
+    transform: translateX(0%);
+}
+.jp{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
 .container{
     max-width: 1080px;
 

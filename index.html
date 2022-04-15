@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css" />
     <!-- JS -->
@@ -22,19 +22,21 @@
     <header>    
         <nav class="nav">      
                 
-           
-             <ul>
+            <ul>
                 <li class="dropdown__icon nav__item"><a href="javascript:void(0)" id="hamburger-icon">☰</a></li>
             </ul> 
-            <ul class="nav__list hidden" id="hamburger-menu">                
+        <div class="nav__popout fade__right nav__hidden" id="hamburger-menu">
+            <ul class="nav__list">                
                 <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">About</a></li>                    
                 <li class="nav__item"><a href="#" class="nav__link">Courses</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Skills</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Contact</a></li> 
-                <li class="nav__item locale"><a href="#" class="nav__link">EN</a></li> 
+                <li class="nav__item locale en"><a href="#" class="nav__link">EN</a></li>
+                <li class="nav__item locale jp"><a href="#" class="nav__link">日本語</a></li>
             </ul>
+        </div>
             <ul>
                 <li class="dropdown__icon nav__item"><a> </a></li>
             </ul>
