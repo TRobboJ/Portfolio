@@ -18,18 +18,18 @@ function typeWriter() {
   }
   
 }
-function typeWriterHero() {
-  if (x < EN_HERO.length) {
-    heroText.innerHTML += EN_HERO.charAt(x);
-    x++;
-    setTimeout(typeWriterHero, TEXT_SPEED_HERO);
-  }
+// function typeWriterHero() {
+//   if (x < EN_HERO.length) {
+//     heroText.innerHTML += EN_HERO.charAt(x);
+//     x++;
+//     setTimeout(typeWriterHero, TEXT_SPEED_HERO);
+//   }
   
-}
+// }
   
 
 typeWriter()
-typeWriterHero()
+// typeWriterHero()
 
 function typeWriterJA() {
     
