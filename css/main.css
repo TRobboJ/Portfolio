@@ -67,8 +67,7 @@ ul li.nav__item{
     padding: 1em 0 0;
 
 }
-.nav__item a,
-.dropdown__icon{
+.nav__item a{
     display: block;
     text-decoration: none;
     text-transform: uppercase;
@@ -78,21 +77,25 @@ ul li.nav__item{
     transition: 0.4s;
     padding: 0 1.5rem 0 0;
 }
-.dropdown__icon{
-    flex-grow: 1;
-   flex-basis: 0;
+ul li.dropdown__icon a{
+    text-align: center;
+    padding: 0;
+    /* overflow: hidden; */
+  
 }
-.nav__item a:hover{
+.nav__item:hover{
     color: var(--light-col);
-    transform: scale(1.2); 
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
+    transform: scale(1.1); 
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .nav__hidden{
     height: 0;
+    /* This is causing overflow issues...*/
+    overflow: hidden !important;
 }
 .hidden{
     display: none;
@@ -120,7 +123,7 @@ ul li.nav__item{
 
 .hero__container{
     text-align: center;
-    margin: 1em 2em;
+    margin: 1em 2em 3em;
     
 }
 .hero__container p{
@@ -134,6 +137,7 @@ ul li.nav__item{
     padding: 0.5em 0 0;
     margin: 0;
     line-height: 1.2;
+    /* any way to prevent the about section from being pushed? */
 }
 .hero__img{
     max-width: 1080px;
@@ -145,7 +149,10 @@ ul li.nav__item{
     border-radius: 50%;
 
 }
-.arrow{
+
+/* blinking arrow below */
+
+/* .arrow{
     font-size: 2rem;
     
 }
@@ -169,10 +176,13 @@ ul li.nav__item{
     to {
       visibility: hidden;
     }
-  }
+  } */
 /* SECTIONS */
 
-section{  padding: 1em 0 2em;}
+section{  
+    padding: 1em 0 2em;
+    width: 100%;
+}
 .about{
     color: var(--light);
     background-color: var(--col-secondary);
@@ -195,6 +205,12 @@ h2{
     background-color: var(--light-col);
   
 }
+.project__img img{
+    width: 100%;
+}
+
+
+/* Contact and Inputs */
 .contact{
     background-color: var(--dark);
     color: var(--light);
@@ -224,6 +240,11 @@ form button{
     border-radius: 100px;
     background-color: var(--light);
     font-weight: 600;
+    
+}
+form button:active{
+    background-color: var(--link-col);
+    transform: translateY(2px);
 }
 .required{
     color: var(--req-col)
@@ -256,3 +277,96 @@ form button{
      
  
  }  */
+
+ @media (min-width: 600px){
+    
+    .nav__item a{
+        font-size: 3rem;
+    }
+
+    .hero__img{
+        max-width: 520px;
+    }
+    #welcome__text{
+        font-size: 1.8rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.3rem;
+    }
+    section p, ul li, label, form button{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    .list__grid{
+        display: grid;
+        grid-template: 0.5fr 0.5fr / 1fr 1fr;
+        grid-gap: 0.3em;
+       
+    }
+    .other__list{
+        grid-row-start: 1;
+        grid-column-start: 2;
+    } 
+    .form__grid{
+        display: grid;
+    }
+    form button{
+        max-width: 30%;
+        margin-top: 0.5em;
+        
+    }
+
+ }
+
+ @media (min-width: 900px){
+    
+    /* desktop nav resets */
+    .nav{
+        width: 100%;
+    }
+    nav ul,.dropdown__icon{
+        display: none;
+        
+    }
+    .nav__hidden{
+        height: 100%;
+        width: 100%;
+    }
+    .fade__right{
+        transform: translateX(0%)
+    }
+    .nav__list{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        justify-content: space-around;
+        
+    }
+    .nav__item a{
+        font-size: 1.8rem;
+        padding: 0.2em 0;
+        margin: 0;
+        
+    }
+    .nav__item + .nav__item{
+        padding: 0;
+    }
+}
+
+@media (min-width: 1200px){
+    *{
+        border: 2px solid blue;
+    }
+}
+
+@media (min-width: 1800px){
+    *{
+        border: 2px solid orange;
+    }
+}

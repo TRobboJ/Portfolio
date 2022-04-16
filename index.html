@@ -23,7 +23,7 @@
         <nav class="nav">      
                 
             <ul>
-                <li class="dropdown__icon nav__item"><a href="javascript:void(0)" id="hamburger-icon">☰</a></li>
+                <li class="dropdown__icon nav__item"><a href="#" id="hamburger-icon">☰</a></li>
             </ul> 
         <div class="nav__popout fade__right nav__hidden" id="hamburger-menu">
             <ul class="nav__list">                
@@ -33,7 +33,7 @@
                 <li class="nav__item"><a href="#" class="nav__link">Skills</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Contact</a></li> 
-                <li class="nav__item locale en"><a href="#" class="nav__link">EN</a></li>
+                <!-- <li class="nav__item locale en"><a href="#" class="nav__link">EN</a></li> -->
                 <li class="nav__item locale jp"><a href="#" class="nav__link">日本語</a></li>
             </ul>
         </div>
@@ -48,12 +48,12 @@
                 <img src="./img/portrait/tr-suit-sm.jpeg" alt="Picture of Thomas in a suit">
             </div>
             <p id="welcome__text"> </p>
-            <h1>My name is Thomas and I'm a web developer.</h1>
-            <div class="arrow blink"><a href="#about">⮟</a></div>
+            <h1 id="hero__text"> </h1>
+            <!-- <div class="arrow blink"><a href="#about">⮟</a></div> -->
             
         </div>
     </section>
-    <section class="about">
+    <section class="about sticky">
         <div class="container">
             <div class="row">
              <i class="fa-solid fa-address-card fa-lg"></i><h2>About</h2>
@@ -86,21 +86,24 @@
         <div class="container">
             <div class="row">
             <i class="fa-brands fa-html5 fa-lg"></i><h2>Skills</h2></div>
-        <h3>Development</h3>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>Javascript</li>
-            <li>SASS</li> 
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-        </ul>
-        <h3>Other</h3>
-        <ul>
-            <li>Japanese Fluency (JLPT N1)</li>
-            <li>JA to EN Translation</li>
-        </ul>
+        <div class="list__grid">
+            <h3>Development</h3>
+            
+            <ul class="development__list">
+                <li>HTML & CSS</li>
+                <li>Javascript</li>
+                <li>SASS</li> 
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+            </ul>
+            <h3 class="other__list">Other</h3>
+            <ul>
+                <li>Japanese Fluency (JLPT N1)</li>
+                <li>JA to EN Translation</li>
+            </ul>
+        </div>
         </div>
     </section>
     <section class="projects">
@@ -108,16 +111,18 @@
             <div class="row">
                 <i class="fa-solid fa-code fa-lg"></i><h2>Projects</h2>
             </div>
-            
                 <h3 class="project__item"><span>01</span> <a href="./01 mApp/mApp.html">mApp</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
-                <img src="./img/" alt="image of mApp project">
+                <div class="project__img"><img src="https://picsum.photos/id/237/200/100" alt="image of mApp project"></div>
+                
                 <h3 class="project__item"><span>02</span> <a href="./02/">TBD</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
-                <img src="./img/" alt="image of ... project">
+                <div class="project__img"><img src="https://picsum.photos/seed/picsum/200/100" alt="image of ... project"></div>
+                
                 <h3 class="project__item"><span>03</span> <a href="./03/">TBD</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
-                <img src="./img/" alt="image of ... project">
+                <div class="project__img"><img src="https://picsum.photos/seed/picsum/200/100" alt="image of ... project"></div>
+                
         </div>
         
     </section>
@@ -126,8 +131,9 @@
             <div class="row">
                 <i class="fa-solid fa-envelope fa-lg"></i><h2>Contact</h2>
             </div>
-            
-            <form action="https://formspree.io/f/xwkyrnyw" method="POST" class="contact__form">
+            <!-- https://formspree.io/f/xwkyrnyw -->
+            <form action="" method="POST" class="contact__form">
+                <div class="form__grid">
                 <label for="name">Name <span class="required">*</span></label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email <span class="required">*</span></label>
@@ -135,6 +141,7 @@
                 <label for="message">Message <span class="required">*</span></label>
                 <textarea name="message" id="message" cols="20" rows="5" required></textarea>
                 <button type="submit">Submit</button>
+            </div>
             </form>
         </div>
     </section>
