@@ -50,7 +50,7 @@ ul li.nav__item{
    width:100%;
    display: flex;
   justify-content: space-between;
-   
+   border
     
 }
 .nav__popout{
@@ -76,6 +76,7 @@ ul li.nav__item{
     font-size: 2rem;
     transition: 0.4s;
     padding: 0 1.5rem 0 0;
+    
 }
 ul li.dropdown__icon a{
     text-align: center;
@@ -90,7 +91,9 @@ ul li.dropdown__icon a{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
+    /* opacity: 0.8;  */
 }
+
 
 .nav__hidden{
     height: 0;
@@ -112,10 +115,10 @@ ul li.dropdown__icon a{
     background-color: var(--req-col);
     border-radius: 100px;
     padding: 0 1.4rem 0.1em;
-    text-align: right;
+    text-align: center;
     width: 80%;
     margin: 0 auto;
- 
+    
 }
 
 
@@ -136,17 +139,34 @@ ul li.dropdown__icon a{
 .hero__container p{
     padding: 0.5em 0 0.2em;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 4rem;
+    font-weight: 900;
     letter-spacing: 2px;
-    color: var(--dark);
+    color: var(--light-col);
+    mix-blend-mode: difference;
+    margin-top: -120px;
+}
+.spacing{
+    padding: 40px 0;
+}
+.triangle{
+    margin: -2px 10%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 40px 40px;
+    border-color: transparent transparent var(--dark) transparent; 
 }
 .hero__container h1{
-    padding: 0.5em 0 0;
+    padding: 0.5em 0;
     line-height: 1.2;
     text-align: center;
     margin: 0 auto;
-    /* any way to prevent the about section from being pushed? */
-}
+    background-color: var(--dark);
+    color: var(--light);
+    border-left: 10px solid var(--col-secondary);
+    max-width: 1000px;
+   }
 
 .hero__img{
     max-width: 1080px;
@@ -299,6 +319,10 @@ form button:active{
     #welcome__text{
         font-size: 1.8rem;
     }
+    .triangle{
+        margin: -2px 15%;
+        border-width: 0 0 60px 60px;
+    }
     h1{
         font-size: 3rem;
     }
@@ -372,13 +396,26 @@ form button:active{
        width: 100%;
      
     }
+
+    .triangle{
+        margin: -2px 18%;
+        border-width: 0 0 80px 80px;
+    }
 }
 
 @media (min-width: 1200px){
-    
+    .triangle{
+        margin: -2px 25%;
+        border-width: 0 0 80px 80px;
+    }
+   
     
 }
 
 @media (min-width: 1800px){
+    .triangle{
+        margin: -2px 35%;
+        border-width: 0 0 80px 80px;
+    }
     
 }
