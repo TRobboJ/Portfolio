@@ -1,0 +1,23 @@
+body{
+    font-family:  'Zen Maru Gothic', 'Noto Serif JP', 'Noto Sans JP', serif, sans-serif;
+}
+.locale__en{
+    font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif;  
+}
+.locale__en a.nav__link__en{
+    font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif;    
+    background-color: var(--req-col);
+    border-radius: 100px;
+    padding: 0 1.4rem 0.1em;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px){
+    .locale__en a.nav__link__en{
+        border-radius: 100px;
+        padding: 0.1em 0.3em 0.1em;
+        width: 100%;
+    }
+}

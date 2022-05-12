@@ -14,6 +14,7 @@ const toggleHamburgerMenu = function(){
 hamburgerIcon.addEventListener("click", toggleHamburgerMenu)
 // Smooth scrolling for sections
 document.querySelector('.nav__list').addEventListener('click', function (e) {
+      if (e.target.classList.contains('nav__link__jp') || e.target.classList.contains('nav__link__en')) return;
       e.preventDefault();
       
       if (e.target.classList.contains('nav__link')) {

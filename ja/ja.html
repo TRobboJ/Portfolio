@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
@@ -8,15 +8,16 @@
     <meta name="author" content="Thomas Robinson" />
     <!-- Font Awesome -->
     <script defer src="https://kit.fontawesome.com/8633518a11.js" crossorigin="anonymous"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?Montserrat:wght@400;600&Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;500&display=swap&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- 日本語サイトのみのCSS -->
+    <link rel="stylesheet" href="ja.css" />
     <!-- JS -->
-    <script defer src="./scripts/layouts.js"></script>
-    <script defer src="./scripts/navigation.js"></script>
+    <script defer src="../scripts/layouts.js"></script>
+    <script defer src="../scripts/navigation.js"></script>
   </head>
   <body>
     <header class="header">    
@@ -27,14 +28,14 @@
             </ul> 
         <div class="nav__popout fade__right nav__hidden" id="hamburger-menu">
             <ul class="nav__list">                
-                <!-- <li class="nav__item"><a href="#" class="nav__link">Home</a></li> -->
-                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>                    
-                <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
-                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
-                <!-- <li class="nav__item locale en"><a href="#" class="nav__link__en">EN</a></li> -->
-                <li class="nav__item locale__jp"><a href="ja/ja.html" class="nav__link__jp">日本語</a></li>
+                <!-- <li class="nav__item"><a href="#" class="nav__link">ホーム</a></li> -->
+                <li class="nav__item"><a href="#about" class="nav__link">自己紹介</a></li>                    
+                <li class="nav__item"><a href="#courses" class="nav__link">資格</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">スキル</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">作品一覧</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">お問い合わせ</a></li> 
+                <li class="nav__item locale__en"><a href="../index.html" class="nav__link__en">EN</a></li>
+                <!-- <li class="nav__item locale__jp"><a href="#" class="nav__link__jp">English</a></li> -->
             </ul>
         </div>
             <!-- <ul>
@@ -45,10 +46,10 @@
     <section class="hero">
         <div class="hero__container">
             <div class="hero__img">
-                <img src="./img/portrait/tr-suit-sm.jpeg" alt="Picture of Thomas in a suit">
+                <img src="../img/portrait/tr-suit-sm.jpeg" alt="Picture of Thomas in a suit">
             </div>
-                <p id="welcome__text"> </p>
-                <div class="spacing"></div>
+                <!-- <p id="welcome__text"> </p>
+                <div class="spacing"></div> -->
                 <div class="triangle"></div>
                 <h1 id="hero__text"></h1>
            
@@ -59,18 +60,18 @@
     <section class="about sticky" id="about">
         <div class="container">
             <div class="row">
-             <i class="fa-solid fa-address-card fa-xl"></i><h2>About</h2>
+             <i class="fa-solid fa-address-card fa-xl"></i><h2>自己紹介</h2>
             </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore odio corrupti eveniet, autem laborum earum pariatur dignissimos explicabo facilis nostrum?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur et a dolores incidunt nostrum ab aperiam earum corporis repellendus, asperiores distinctio cupiditate temporibus minus suscipit ipsum! Sapiente, alias voluptas.</p>
         </div>
     </section>
     
     <section class="courses" id="courses">
         <div class="container">
         <div class="row">
-            <i class="fa-solid fa-graduation-cap fa-xl"></i><h2>Courses</h2></div>
-        <h3>Courses</h3>
-        <ul>
+            <i class="fa-solid fa-graduation-cap fa-xl"></i><h2>資格</h2></div>
+        <h3>コース</h3>
+        <ul class="locale__en">
             <li>Beginner Full Stack Web Development: HTML, CSS, React & Node</li>
             <!-- click to open cert? -->
             <li>The Complete Javascript Course 2022: From Zero to Expert!</li>
@@ -78,11 +79,12 @@
             <li>Kevin Powell's 21 Day Course on Conquering Responsive Layouts</li>
             <!-- check if cert exists -->
         </ul>
-        <h3>Other</h3>
+        <h3>その他</h3>
         <ul>
-            <li>JLPT N1</li>
+            
+            <li>日本語能力試験1級</li>
         </ul>
-        <p><a href="#courses">Learn more about my courses...</a></p>
+        <p><a class="locale__en" href="#courses">Learn more about my courses...</a></p>
         </div>
         <!-- Add JLPT qualifications? -->
         
@@ -90,11 +92,11 @@
     <section class="skills" id="skills">
         <div class="container">
             <div class="row">
-            <i class="fa-brands fa-html5 fa-xl"></i><h2>Skills</h2></div>
+            <i class="fa-brands fa-html5 fa-xl"></i><h2>スキル</h2></div>
         <div class="list__grid">
-            <h3>Development</h3>
+            <h3>プログラミング</h3>
             
-            <ul class="development__list">
+            <ul class="development__list locale__en">
                 <li>HTML & CSS</li>
                 <li>Javascript</li>
                 <li>SASS</li> 
@@ -103,10 +105,10 @@
                 <li>Express.js</li>
                 <li>MongoDB</li>
             </ul>
-            <h3 class="other__list">Other</h3>
+            <h3 class="other__list">その他</h3>
             <ul>
-                <li>Japanese Fluency</li>
-                <li>JA to EN Translation</li>
+                <li>日本語ビジネスレベル</li>
+                <li>日英翻訳</li>
             </ul>
         </div>
         </div>
@@ -114,7 +116,7 @@
     <section class="projects" id="projects">
         <div class="container">
             <div class="row">
-                <i class="fa-solid fa-code fa-xl"></i><h2>Projects</h2>
+                <i class="fa-solid fa-code fa-xl"></i><h2>作品一覧</h2>
             </div>
                 <h3 class="project__item"><span>01</span> <a href="./01 mApp/mApp.html">mApp</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
@@ -134,18 +136,18 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="row">
-                <i class="fa-solid fa-envelope fa-xl"></i><h2>Contact</h2>
+                <i class="fa-solid fa-envelope fa-xl"></i><h2>お問い合わせ</h2>
             </div>
             <!-- https://formspree.io/f/xwkyrnyw -->
             <form action="" method="POST" class="contact__form">
                 <div class="form__grid">
-                <label for="name">Name <span class="required">*</span></label>
+                <label for="name">お名前 <span class="required">*</span></label>
                 <input type="text" id="name" name="name" required>
-                <label for="email">Email <span class="required">*</span></label>
+                <label for="email">メールアドレス <span class="required">*</span></label>
                 <input type="text" id="email" name="email" required>
-                <label for="message">Message <span class="required">*</span></label>
+                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
                 <textarea name="message" id="message" cols="20" rows="5" required></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit">送信</button>
             </div>
             </form>
         </div>

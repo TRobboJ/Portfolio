@@ -1,9 +1,10 @@
-const EN_WELCOME = `Welcome!`
-const JA_WELCOME = `ようこそ!`
-const EN_HERO = `My name is Thomas and I'm a web developer.`
-const TEXT_SPEED_WELCOME = 300
-const TEXT_SPEED_HERO = 50
-const welcomeText = document.querySelector("#welcome__text")
+const EN_HERO = `My name is Thomas and I'm studying to be a web developer.`
+const JA_HERO = `トーマスと申します。ウェブエンジニアを目指しています。`
+
+
+const TEXT_SPEED_EN = 50
+const TEXT_SPEED_JA = 100
+
 const heroText = document.querySelector("#hero__text")
 
 let i = 0;
@@ -18,26 +19,25 @@ function typeWriter() {
   }
   
 }
-function typeWriterHero() {
+
+function typeWriterHeroEN() {
   if (x < EN_HERO.length) {
     heroText.innerHTML += EN_HERO.charAt(x);
     x++;
-    setTimeout(typeWriterHero, TEXT_SPEED_HERO);
+    setTimeout(typeWriterHeroEN, TEXT_SPEED_EN);
   }
   
 }
-  
 
-// typeWriter()
-typeWriterHero()
-
-function typeWriterJA() {
+function typeWriterHeroJA() {
     
-    if (i < JA_WELCOME.length) {
-      welcomeText.innerHTML += JA_WELCOME.charAt(i);
+    if (i < JA_HERO.length) {
+      heroText.innerHTML += JA_HERO.charAt(i);
       i++;
-      setTimeout(typeWriterJA, TEXT_SPEED);
+      setTimeout(typeWriterHeroJA, TEXT_SPEED_JA);
     }
   }
 
+  if (document.documentElement.lang === "en") {typeWriterHeroEN()}
+  if (document.documentElement.lang === "ja") {typeWriterHeroJA()}
 
