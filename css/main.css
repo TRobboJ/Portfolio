@@ -213,7 +213,6 @@ h5{
 }
 p{
     margin: 0.4rem 0;
-    font-size: 0.9rem;
 }
 
 .skills{
@@ -350,6 +349,10 @@ form button:active{
     }
     input, textarea {
         width: 90%;
+    }
+    p{
+        margin: 0.4rem 0;
+        font-size: 0.9rem;
     }
 
  }
