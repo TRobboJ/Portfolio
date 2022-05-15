@@ -1,0 +1,8 @@
+#root redirect
+/*  /index.html 200
+
+#Japanese site redirect
+/ja/*   /ja.html    200
+
+#mApp redirect
+/mApp/* /mApp.html  200
