@@ -1,0 +1,57 @@
+.carousel__track-container {
+    max-width: 100rem;
+    height: 50rem;
+    margin: 0 auto;
+    position: relative;
+  
+    /* IN THE END */
+    overflow: hidden;
+  }
+  
+  .carousel__slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* THIS creates the animation! */
+    transition: transform 1s;
+  }
+  
+  .carousel__slide > img {
+    /* Only for images that have different size than slide */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+  
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: inherit;
+    color: #333;
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 3.25rem;
+    cursor: pointer;
+  }
+  
+  .carousel__btn-left {
+    left: 6%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .carousel__btn-right {
+    right: 6%;
+    transform: translate(50%, -50%);
+  }
+  

@@ -249,20 +249,25 @@ input:focus, textarea:focus {
     outline-color: var(--link-col);
     outline-offset: 5px;
  }
-form button{
-    padding: 0.6em 1.5em;
+button{
     font-family: inherit;
     font-size: inherit;
-    border: 0;
-    border-radius: 100px;
     background-color: var(--light);
     font-weight: 600;
-    
+    cursor: pointer;
 }
-form button:active{
+button:active{
     background-color: var(--link-col);
+}
+.form-btn{
+    padding: 0.6em 1.5em;    
+    border: 0;    
+    border-radius: 100px;
+}
+.form-btn:active{
     transform: translateY(2px);
 }
+
 .required{
     color: var(--req-col)
 }

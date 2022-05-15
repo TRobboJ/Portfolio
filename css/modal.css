@@ -1,0 +1,30 @@
+.modal {
+    /* padding: 1em; */
+    max-width: 1200px;
+    width: 100%;
+  
+    /* & > * {
+      margin: 0 0 0.5rem 0;
+    } */
+  }
+  
+  .modal::backdrop {
+    background: rgb(0 0 0 / 0.4);
+  }
+  
+/*   
+  h1 em {
+    color: var(--cyan-9);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  } */
+  
+  .open-btn,
+  .close-btn {
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 0.2em 1em;
+    margin: 1rem 0 0;
+  }
+  
