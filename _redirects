@@ -6,3 +6,6 @@
 
 #mApp redirect
 /mApp/* /mApp.html  200
+
+#react-frontend redirect
+/React-Frontend/public/* /index.html  200
