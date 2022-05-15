@@ -10,7 +10,7 @@
     --dark-col: #1E2749; 
 
     --link-col: #81D2C7;
-    --link-clicked: #E0E0E2;
+    --link-clicked: #db8452;
 
     --req-col: #e03737;
 }
@@ -179,37 +179,10 @@ ul li.dropdown__icon a{
 
 }
 
-/* blinking arrow below */
-
-/* .arrow{
-    font-size: 2rem;
-    
-}
-.arrow a{
-    text-decoration: none;
-    color: var(--dark);
-}
-.blink {
-   
-    animation: blink-animation 2s steps(5, start) infinite;
-    -webkit-animation: blink-animation 2s steps(5, start) infinite;
-    animation-delay: 3s;
-  }
-  @keyframes blink-animation {
-    to {
-        
-      visibility: hidden;
-    }
-  }
-  @-webkit-keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  } */
 /* SECTIONS */
 
 section{  
-    padding: 1em 0 2em;
+    padding: 1em 0;
     width: 100%;
 }
 .about{
@@ -226,7 +199,21 @@ section{
 h2{
     font-size: 2rem;
     margin: 0 1em;
-    
+}
+h3{
+    margin: 0.6rem 0;
+    padding: 0;
+ 
+}
+h5{
+    padding: 0.2rem 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+p{
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
 }
 
 .skills{
@@ -237,7 +224,9 @@ h2{
 .project__img img{
     width: 100%;
 }
-
+.project__break{
+    border-top: 1px solid var(--col-secondary);
+}
 
 /* Contact and Inputs */
 .contact{
@@ -340,6 +329,12 @@ form button:active{
         grid-template: 0.5fr 0.5fr / 1fr 1fr;
         grid-gap: 0.3em;
        
+    }
+    .list__grid h3{
+        align-self: end;
+    }
+    .list__grid ul{
+       margin: 0;
     }
     .other__list{
         grid-row-start: 1;

@@ -19,43 +19,43 @@
     <script defer src="./scripts/navigation.js"></script>
   </head>
   <body>
+
     <header class="header">    
         <nav class="nav">      
                 
             <ul>
                 <li class="dropdown__icon nav__item"><a href="#" id="hamburger-icon">☰</a></li>
             </ul> 
-        <div class="nav__popout fade__right nav__hidden" id="hamburger-menu">
-            <ul class="nav__list">                
-                <!-- <li class="nav__item"><a href="#" class="nav__link">Home</a></li> -->
-                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>                    
-                <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
-                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
-                <!-- <li class="nav__item locale en"><a href="#" class="nav__link__en">EN</a></li> -->
-                <li class="nav__item locale__jp"><a href="ja" class="nav__link__jp">日本語</a></li>
-            </ul>
-        </div>
-            <!-- <ul>
-                <li class="dropdown__icon nav__item"><a> </a></li>
-            </ul> -->
+            <div class="nav__popout fade__right nav__hidden" id="hamburger-menu">
+                <ul class="nav__list">      
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>                    
+                    <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
+                    <li class="nav__item locale__jp"><a href="./ja/ja" class="nav__link__jp">日本語</a></li>
+                </ul>
+            </div>            
         </nav>
     </header>
+
     <section class="hero">
         <div class="hero__container">
-            <div class="hero__img">
-                <img src="./img/portrait/tr-suit-sm.jpeg" alt="Picture of Thomas in a suit">
+            <div class="hero__img">                
+                    <img srcset="./img/portrait/tr-suit-sm.jpeg 398w,
+                            ./img/portrait/tr-suit-lg.jpeg 800w"
+                    sizes="(max-width: 600px) 398px,
+                            800px"
+                    src="./img/portrait/tr-suit-lg.jpeg" 
+                    alt="Picture of Thomas in a suit">
             </div>
                 <p id="welcome__text"> </p>
                 <div class="spacing"></div>
                 <div class="triangle"></div>
-                <h1 id="hero__text"></h1>
-           
-            <!-- <div class="arrow blink"><a href="#about">⮟</a></div> -->
-            
+                <h1 id="hero__text"></h1> 
         </div>
     </section>
+
     <section class="about sticky" id="about">
         <div class="container">
             <div class="row">
@@ -69,7 +69,7 @@
         <div class="container">
         <div class="row">
             <i class="fa-solid fa-graduation-cap fa-xl"></i><h2>Courses</h2></div>
-        <h3>Courses</h3>
+        <h3>Courses & Qualifications</h3>
         <ul>
             <li>Beginner Full Stack Web Development: HTML, CSS, React & Node</li>
             <!-- click to open cert? -->
@@ -84,9 +84,9 @@
         </ul>
         <p><a href="#courses">Learn more about my courses...</a></p>
         </div>
-        <!-- Add JLPT qualifications? -->
-        
+        <!-- Add JLPT qualifications? -->        
     </section>
+
     <section class="skills" id="skills">
         <div class="container">
             <div class="row">
@@ -111,26 +111,35 @@
         </div>
         </div>
     </section>
+
     <section class="projects" id="projects">
         <div class="container">
             <div class="row">
                 <i class="fa-solid fa-code fa-xl"></i><h2>Projects</h2>
             </div>
-                <h3 class="project__item"><span>01</span> <a href="./01 mApp/mApp.html">mApp</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
+                <h3 class="project__item"><span>01 </span><a href="./01 mApp">mApp</a></h3>
                 <div class="project__img"><img src="./img/projects/mApp.png" alt="image of mApp project"></div>
+                <p>mApp is a country guessing game written entirely in vanilla JS. </p>
+                <h5><a href="https://github.com/TRobboJ">View the code on GitHub</a></h5>
+                <hr class="project__break">
                 
-                <h3 class="project__item"><span>02</span> <a href="./02/">TBD</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
+
+                <h3 class="project__item"><span>02 </span><a href="./02/">React Frontend</a></h3>
+                
                 <div class="project__img"><img src="https://picsum.photos/seed/picsum/200/100" alt="image of ... project"></div>
-                
-                <h3 class="project__item"><span>03</span> <a href="./03/">TBD</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
-                <div class="project__img"><img src="https://picsum.photos/seed/picsum/200/100" alt="image of ... project"></div>
+                <h5><a href="https://github.com/TRobboJ">View the code on GitHub</a></h5>
+                <hr class="project__break">
+
+                <h3 class="project__item"><span>03 </span><a href="./03/">TBD</a></h3>
                 
-        </div>
-        
+                <div class="project__img"><img src="https://picsum.photos/seed/picsum/200/100" alt="image of ... project"></div>                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nisi!</p>
+                <h5><a href="https://github.com/TRobboJ">View the code on GitHub</a></h5>
+              
+        </div>        
     </section>
+
     <section class="contact" id="contact">
         <div class="container">
             <div class="row">
