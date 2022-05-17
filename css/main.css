@@ -260,9 +260,10 @@ button:active{
     background-color: var(--link-col);
 }
 .form-btn{
-    padding: 0.6em 1.5em;    
+    padding: 0.8rem 1rem;    
     border: 0;    
     border-radius: 100px;
+    text-align: center;
 }
 .form-btn:active{
     transform: translateY(2px);
@@ -287,18 +288,7 @@ button:active{
 
 
 /* Breakpoints set at 600px, 900px, 1200px, and 1800px  */
-/* 
-.nav{
-     width:100%; 
- }
- .nav__list{
-     margin: 0 1em;
-   
-     display: flex;
-     justify-content: space-between;
-     
- 
- }  */
+
 
  @media (min-width: 600px){
   
@@ -347,8 +337,8 @@ button:active{
     .form__grid{
         display: grid;
     }
-    form button{
-        max-width: 30%;
+    .form-btn{
+        max-width: 25%;
         margin-top: 0.5em;
         
     }
@@ -407,6 +397,8 @@ button:active{
         margin: -2px 18%;
         border-width: 0 0 80px 80px;
     }
+
+  
 }
 
 @media (min-width: 1200px){

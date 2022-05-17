@@ -13,13 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?Montserrat:wght@400;600&Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;500&display=swap&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css" />
-    <!-- 日本語サイトのみのCSS -->
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/carousel.css" />
+    <!-- 日本語サイトのCSS -->
     <link rel="stylesheet" href="ja.css" />
     <!-- JS -->
     <script defer src="../scripts/layouts.js"></script>
     <script defer src="../scripts/navigation.js"></script>
     <script defer src="../scripts/modal.js"></script>
-    <script defer src="./scripts/carousel.js"></script>
+    <script defer src="../scripts/carousel.js"></script>
   </head>
   <body>
     <header class="header">    
@@ -61,7 +63,15 @@
             <div class="row">
              <i class="fa-solid fa-address-card fa-xl"></i><h2>自己紹介</h2>
             </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur et a dolores incidunt nostrum ab aperiam earum corporis repellendus, asperiores distinctio cupiditate temporibus minus suscipit ipsum! Sapiente, alias voluptas.</p>
+        <p>オーストラリアのメルボルン出身です。日本でのワーキングホリデーや留学の経験を経て、現在は東京に住んでいます。
+            <br>
+            昔からITに強い興味を持っており、自分でホームサーバーを作ってみたり、Webエンジニアや様々なプログラミング言語を独学で学んでみたりしてきました。新しい業界への挑戦ではありますが、これまで培ってきた知識や経験、スキルを生かし、今後はIT業界で自分の力を発揮して成長していきたいと考えています。
+            <br>
+            エンジニアの基本的なスキルの他、コミュニケーション力にも自信があります。また、柔軟な考え方を持っており、計画的に業務を遂行する能力があります。
+            <br>
+            よろしくお願いいたします。
+        
+        </p>
         </div>
     </section>
     
@@ -72,19 +82,20 @@
         <h3>コース</h3>
         <ul class="locale__en">
             <li>Beginner Full Stack Web Development: HTML, CSS, React & Node</li>
-            <!-- click to open cert? -->
+            
             <li>The Complete Javascript Course 2022: From Zero to Expert!</li>
-            <!-- click to open cert? -->
+          
             <li>Kevin Powell's 21 Day Course on Conquering Responsive Layouts</li>
-            <!-- check if cert exists -->
+
+            <button class="button open-btn">証明書を表示</button>
         </ul>
         <h3>その他</h3>
         <ul>           
             <li>日本語能力試験1級</li>
         </ul>
-        <p><a class="locale__en" href="#courses">Learn more about my courses...</a></p>
+       
         </div>
-        <!-- Add JLPT qualifications? -->        
+           
     </section>
 
     <section class="skills" id="skills">
@@ -119,8 +130,8 @@
             </div>      
                 <h3 class="project__item"><span>01 </span><a href="../mApp/mApp">mApp</a></h3>
                 <div class="project__img"><img src="../img/projects/mApp.png" alt="ｍAppという作品の画像"></div>
-                <p>mApp is a country guessing game written entirely in vanilla JS. </p>
-                <h5><a href="https://github.com/TRobboJ">View the code on GitHub</a></h5>
+                <p>「mApp」・・・Javascriptのみで作成した、世界地図から国を当てるゲーム</p>
+                <h5><a href="https://github.com/TRobboJ">コードをGitHubで見る</a></h5>
                 <!-- <hr class="project__break"> -->
                 
 
@@ -151,7 +162,7 @@
                 <input type="text" id="email" name="email" required>
                 <label for="message">お問い合わせ内容 <span class="required">*</span></label>
                 <textarea name="message" id="message" cols="20" rows="5" maxlength ="500" required></textarea>
-                <button type="submit">送信</button>
+                <button class="form-btn"  type="submit">送信</button>
             </div>
             </form>
         </div>
@@ -159,5 +170,28 @@
     <footer>
 
     </footer>
+    <!-- Modal -->
+    <dialog class="modal" id="modal">
+        <div class="carousel">
+            <button class="carousel__btn carousel__btn-left">
+                &larr;
+            </button>
+            <div class="carousel__track-container">
+                <div class="carousel__slide">
+                    <img class="carousel__img" src="../img/certs/Udemy-Fullstack-Course-JA.jpg" alt="Udemy fullstack course completion certificate">
+                </div>
+                <div class="carousel__slide">
+                    <img class="carousel__img" src="../img/certs/Udemy-JS-Course-JA.jpg" alt="Udemy Javascript course completion certificate">                    
+                </div>
+                <div class="carousel__slide">
+                    <img class="carousel__img" src="../img/certs/Conquering-Responsive-Layouts-EN.png" alt="Kevin Powell responsive design course completion certificate">        
+                </div>
+            </div>
+            <button class="carousel__btn carousel__btn-right">
+                &rarr;
+            </button>
+        </div>
+        <button class="button close-btn">閉じる</button>
+    </dialog>
   </body>
 </html>
