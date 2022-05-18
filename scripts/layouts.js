@@ -23,6 +23,7 @@ function typeWriter() {
 function typeWriterHeroEN() {
   if (x < EN_HERO.length) {
     heroText.innerHTML += EN_HERO.charAt(x);
+    if(EN_HERO.charAt(x) === `.`) heroText.innerHTML += `<br>`;
     x++;
     setTimeout(typeWriterHeroEN, TEXT_SPEED_EN);
   }
@@ -33,6 +34,7 @@ function typeWriterHeroJA() {
     
     if (i < JA_HERO.length) {
       heroText.innerHTML += JA_HERO.charAt(i);
+      if(JA_HERO.charAt(i) === `。`) heroText.innerHTML += `<br>`;
       i++;
       setTimeout(typeWriterHeroJA, TEXT_SPEED_JA);
     }
