@@ -178,6 +178,9 @@ ul li.dropdown__icon a{
     border-radius: 50%;
 
 }
+.wip {
+    color: var(--req-col);
+}
 
 /* SECTIONS */
 
@@ -320,7 +323,7 @@ button:active{
     }
     .list__grid{
         display: grid;
-        grid-template: 0.5fr 0.5fr / 1fr 1fr;
+        grid-template: 0.5fr 0.5fr;
         grid-gap: 0.3em;
        
     }
