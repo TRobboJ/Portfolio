@@ -1,6 +1,6 @@
 [submodule "mApp"]
 	path = mApp
 	url = https://github.com/TRobboJ/mApp
-[submodule "React-Frontend"]
-	path = React-Frontend
-	url = https://github.com/TRobboJ/React-Frontend
+# [submodule "React-Frontend"]
+# 	path = React-Frontend
+# 	url = https://github.com/TRobboJ/React-Frontend
